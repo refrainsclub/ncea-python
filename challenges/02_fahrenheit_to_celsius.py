@@ -11,7 +11,7 @@ def main():
     celsius_temp = convert_to_celsius(fahrenheit_temp)
     celsius_temp_rounded = round(celsius_temp)
 
-    print(str(fahrenheit_temp) + "°F is equal to " + str(celsius_temp_rounded) + "°C")
+    print(f"{fahrenheit_temp:,}°F is equal to {celsius_temp_rounded:,}°C")
 
     output = "That temperature is "
 

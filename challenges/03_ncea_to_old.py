@@ -19,7 +19,7 @@ equivalents = {
 
 def main():
     year_level = get_ranged_int("enter a year level (between 1 and 13): ", 1, 13)
-    print("the old system's equivalent is " + equivalents.get(year_level))
+    print(f"the old system's equivalent is {equivalents.get(year_level)}")
 
 
 if __name__ == "__main__":

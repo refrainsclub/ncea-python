@@ -7,7 +7,7 @@ def main():
     age_in_ten_years = age + 10
     graduate_age = 18
 
-    print("\nin 10 years, you will be " + str(age_in_ten_years))
+    print(f"\nin 10 years, you will be {age_in_ten_years}")
 
     if age_in_ten_years < graduate_age:
         print("and you will be at school")

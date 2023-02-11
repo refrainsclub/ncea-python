@@ -7,7 +7,7 @@ def main():
     height = get_int("please enter the height of the triangle: ")
     hypotenuse = sqrt(base**2+height**2)
     perimeter = base + height + hypotenuse
-    print("the perimeter of that triangle is " + str(perimeter))
+    print(f"the perimeter of that triangle is {perimeter}")
 
 
 if __name__ == "__main__":

@@ -1,9 +1,13 @@
+from input import get_int
+
+
 def convert_to_celsius(fahrenheit):
     return (fahrenheit - 32) * 5 / 9
 
 
 def main():
-    fahrenheit_temp = int(input("Please enter a temperature in fahrenheit: "))
+    fahrenheit_temp = get_int("enter a temperature in fahrenheit: ")
+
     celsius_temp = convert_to_celsius(fahrenheit_temp)
     celsius_temp_rounded = round(celsius_temp)
 

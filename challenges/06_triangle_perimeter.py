@@ -1,13 +1,15 @@
-from math import sqrt
-from input import get_int
+from math import hypot
+from input import get_float
 
 
 def main():
-    base = get_int("please enter the base of the triangle: ")
-    height = get_int("please enter the height of the triangle: ")
-    hypotenuse = sqrt(base * base + height * height)  # multiplication is faster than exponentiation
+    print("this only works with right-angled triangles")
+    base = get_float("enter the base: ")
+    height = get_float("enter the height: ")
+    hypotenuse = hypot(base, height)
+    print(f"the hypotenuse is {round(hypotenuse, 2):,}")
     perimeter = base + height + hypotenuse
-    print(f"the perimeter of that triangle is {perimeter:,} units")
+    print(f"the perimeter is {round(perimeter, 2):,}")
 
 
 if __name__ == "__main__":

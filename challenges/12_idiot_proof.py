@@ -4,7 +4,7 @@ LOWEST_NUMBER = 1
 HIGHEST_NUMBER = 100
 
 
-def is_even(number: int):
+def is_even(number: int) -> bool:
     return number % 2 == 0
 
 

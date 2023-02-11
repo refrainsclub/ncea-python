@@ -4,7 +4,7 @@ WARM_TEMP = 16
 HOT_TEMP = 24
 
 
-def convert_to_celsius(fahrenheit: float):
+def convert_to_celsius(fahrenheit: float) -> float:
     return (fahrenheit - 32) * 5 / 9
 
 

@@ -1,8 +1,7 @@
-# https://www.w3resource.com/python-exercises/challenges/1/python-challenges-1-exercise-20.php
 def is_arithmetic(sequence):
-    delta = sequence[1] - sequence[0]
-    for index in range(len(sequence) - 1):
-        if not (sequence[index + 1] - sequence[index] == delta):
+    delta = sequence[1] - sequence[0]  # difference between the first and second element
+    for i in range(len(sequence) - 1):
+        if not sequence[i + 1] - sequence[i] == delta:  # if the diff between current and next element is equal to delta
             return False
     return True
 

@@ -8,7 +8,7 @@ def main():
     lizards = get_int("how many lizards do you have? ")
     chickens = get_int("how many chickens do you have? ")
     legs = cows * 4 + sheep * 4 + horses * 4 + lizards * 4 + chickens * 4
-    print(f"you have {legs} legs on your farm")
+    print(f"you have {legs:,} legs on your farm")
 
 
 if __name__ == "__main__":

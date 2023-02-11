@@ -1,7 +1,10 @@
 from input import get_int
 
+WARM_TEMP = 16
+HOT_TEMP = 24
 
-def convert_to_celsius(fahrenheit):
+
+def convert_to_celsius(fahrenheit: float):
     return (fahrenheit - 32) * 5 / 9
 
 
@@ -15,9 +18,9 @@ def main():
 
     output = "That temperature is "
 
-    if celsius_temp < 16:
+    if celsius_temp < WARM_TEMP:
         output += "cold"
-    elif celsius_temp < 24:
+    elif celsius_temp < HOT_TEMP:
         output += "warm"
     else:
         output += "hot"

@@ -1,10 +1,13 @@
 from input import get_int
 
+SECONDS_IN_MINUTE = 60
+SECONDS_IN_HOUR = 3600
+
 
 def main():
     total_seconds = get_int("enter a whole number of seconds: ")
-    hours, minutes = divmod(total_seconds, 3600)  # returns tuple of quotient and remainder
-    minutes, seconds = divmod(minutes, 60)
+    hours, minutes = divmod(total_seconds, SECONDS_IN_HOUR)  # returns tuple of quotient and remainder
+    minutes, seconds = divmod(minutes, SECONDS_IN_MINUTE)
     print(f"{total_seconds:,}s is equal to {hours:,}h {minutes:,}m {seconds:,}s")
 
 

@@ -1,9 +1,11 @@
 from turtle import forward, right, exitonclick
 
+SIZE = 50
+
 
 def main():
     for _ in range(6):
-        forward(50)
+        forward(SIZE)
         right(60)
     exitonclick()
 

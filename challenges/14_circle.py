@@ -1,8 +1,10 @@
 from turtle import circle, exitonclick
 
+RADIUS = 100
+
 
 def main():
-    circle(100)
+    circle(RADIUS)
     exitonclick()
 
 

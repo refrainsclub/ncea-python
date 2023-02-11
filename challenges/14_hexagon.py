@@ -1,11 +1,10 @@
-from turtle import Turtle
+from turtle import forward, right
 
 
 def main():
-    turtle = Turtle()
-    for i in range(6):
-        turtle.forward(50)
-        turtle.right(60)
+    for _ in range(6):
+        forward(50)
+        right(60)
 
 
 if __name__ == "__main__":

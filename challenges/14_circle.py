@@ -1,9 +1,8 @@
-from turtle import Turtle
+from turtle import circle
 
 
 def main():
-    turtle = Turtle()
-    turtle.circle(100)
+    circle(100)
 
 
 if __name__ == "__main__":

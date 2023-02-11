@@ -1,27 +1,20 @@
-import random
-from turtle import Turtle, exitonclick
+from random import randint
+from turtle import exitonclick, colormode, speed, color, circle, right
 
-ANGLE = 10          # the angle per step
-INNER_RADIUS = 100  # the radius of the inner circle
-OUTER_RADIUS = 75   # the radius of the outer circle
-
-
-def get_random_colour():
-    possibles = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "b", "c", "d", "e", "f")
-    color = "".join(random.choice(possibles) for _ in range(6))
-    code = "#" + color
-    return code
+SPEED = 0              # the speed
+ANGLE = 10             # the angle per step
+INNER_RADIUS = 100     # the radius of the inner circle
+OUTER_RADIUS = 75      # the radius of the outer circle
 
 
 def main():
-    turtle = Turtle()
-    turtle.speed(0)
-    for i in range(360 // ANGLE):
-        turtle.color(get_random_colour())
-        turtle.circle(INNER_RADIUS)
-        turtle.color(get_random_colour())
-        turtle.circle(OUTER_RADIUS)
-        turtle.right(ANGLE)
+    speed(SPEED)
+    colormode(255)  # allow rgb colours from 0 to 255
+    for _ in range(360 // ANGLE):
+        color(randint(0, 255), randint(0, 255), randint(0, 255))
+        circle(INNER_RADIUS)
+        circle(OUTER_RADIUS)
+        right(ANGLE)
     exitonclick()
 
 

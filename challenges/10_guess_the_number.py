@@ -3,7 +3,7 @@ import random
 from input import get_int
 
 LOWEST_NUMBER = 1
-HIGHEST_NUMBER = 10
+HIGHEST_NUMBER = 50
 
 
 def main():
@@ -15,8 +15,10 @@ def main():
         if guess == number:
             print("congrats! you guessed correctly!")
             break
+        elif guess < number:
+            print("your guess is too low!\n")
         else:
-            print("you guessed incorrectly!\n")
+            print("you guess is too high!\n")
 
 
 if __name__ == "__main__":

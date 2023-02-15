@@ -10,7 +10,7 @@ def main():
     number = random.randint(LOWEST_NUMBER, HIGHEST_NUMBER)
 
     while 1:
-        guess = get_int(f"guess a random number from {LOWEST_NUMBER} to {HIGHEST_NUMBER}: ")
+        guess = get_int(f"guess a random number between {LOWEST_NUMBER} and {HIGHEST_NUMBER}: ")
 
         if guess == number:
             print("congrats! you guessed correctly!")

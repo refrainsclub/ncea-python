@@ -8,17 +8,17 @@ HIGHEST_NUMBER = 50
 
 def main():
     number = random.randint(LOWEST_NUMBER, HIGHEST_NUMBER)
+    guess = None
 
-    while 1:
+    while guess != number:
         guess = get_int(f"guess a random number between {LOWEST_NUMBER} and {HIGHEST_NUMBER}: ")
 
-        if guess == number:
-            print("congrats! you guessed correctly!")
-            break
-        elif guess < number:
+        if guess < number:
             print("your guess is too low!\n")
         else:
             print("you guess is too high!\n")
+    else:
+        print("congrats! you guessed correctly!")
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ from input import get_string
 
 INITIAL_MIN = 0
 INITIAL_MAX = 50
+VALID_CHOICES = ["lower", "higher", "correct"]
 
 
 def main():
@@ -12,24 +13,24 @@ def main():
     maximum = INITIAL_MAX
     guesses = 0
 
-    print("Think of a number between 1 to 50")
+    print(f"Think of a number between {INITIAL_MIN} to {INITIAL_MAX}")
     print("valid choices: [lower, higher, correct]\n")
 
     while answer != "correct":
-        if minimum == maximum:
-            print("im out of options.")
+        try:
+            guess = randint(minimum, maximum)
+            guesses += 1
+            answer = get_string(f"my guess is {guess:.0f}. ", VALID_CHOICES)
+
+            if answer == "lower":
+                maximum = guess - 1
+            elif answer == "higher":
+                minimum = guess + 1
+        except ValueError:
+            print("im out of choices")
             break
-
-        guess = randint(minimum, maximum)
-        guesses += 1
-        answer = get_string(f"my guess is {guess:.0f}. ", ["lower", "higher", "correct"])
-
-        if answer == "lower":
-            maximum = guess - 1
-        elif answer == "higher":
-            minimum = guess + 1
     else:
-        print(f"it took me {guesses} guesses.")
+        print(f"it took me {guesses} guess(es).")
 
 
 if __name__ == "__main__":

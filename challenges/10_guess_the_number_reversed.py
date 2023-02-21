@@ -2,8 +2,8 @@ from random import randint
 
 from input import get_string
 
-INITIAL_MIN = 0
-INITIAL_MAX = 50
+INITIAL_MIN = 1
+INITIAL_MAX = 100
 VALID_CHOICES = ["lower", "higher", "correct"]
 
 

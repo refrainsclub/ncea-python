@@ -20,7 +20,7 @@ def main():
         try:
             guess = randint(minimum, maximum)
             guesses += 1
-            answer = get_string(f"my guess is {guess:.0f}. ", VALID_CHOICES)
+            answer = get_string(f"my guess is {guess}. ", VALID_CHOICES)
 
             if answer == "lower":
                 maximum = guess - 1

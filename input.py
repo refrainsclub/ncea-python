@@ -22,3 +22,11 @@ def get_float(prompt: str) -> float:
             return float(input(prompt))
         except ValueError:
             continue
+
+
+def get_string(prompt: str, valid_choices: list) -> str:
+    while 1:
+        answer = input(prompt)
+        if answer in valid_choices:
+            return answer
+        continue

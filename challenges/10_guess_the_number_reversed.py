@@ -16,19 +16,20 @@ def main():
     print("valid choices: [lower, higher, correct]\n")
 
     while answer != "correct":
-        try:
-            guess = randint(minimum, maximum)
-            guesses += 1
-            answer = get_string(f"my guess is {guess:.0f}. ", ["lower", "higher", "correct"])
-            if answer == "lower":
-                maximum = guess - 1
-            elif answer == "higher":
-                minimum = guess + 1
-        except ValueError:
-            print("i am out of available options.")
+        if minimum == maximum:
+            print("im out of options.")
             break
+
+        guess = randint(minimum, maximum)
+        guesses += 1
+        answer = get_string(f"my guess is {guess:.0f}. ", ["lower", "higher", "correct"])
+
+        if answer == "lower":
+            maximum = guess - 1
+        elif answer == "higher":
+            minimum = guess + 1
     else:
-        print(f"i guessed it in {guesses} guesses.")
+        print(f"it took me {guesses} guesses.")
 
 
 if __name__ == "__main__":

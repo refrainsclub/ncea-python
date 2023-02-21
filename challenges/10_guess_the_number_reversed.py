@@ -14,7 +14,7 @@ def main():
     guesses = 0
 
     print(f"Think of a number between {INITIAL_MIN} to {INITIAL_MAX}")
-    print("valid choices: [lower, higher, correct]\n")
+    print(f"valid choices: {VALID_CHOICES}\n")
 
     while answer != "correct":
         try:

@@ -14,9 +14,9 @@ def main():
                             HIGHEST_NUMBER)
 
     if is_even(number):
-        print("that number is even")
+        print(f"{number:,} is even")
     else:
-        print("that number is odd")
+        print(f"{number:,} is odd")
 
 
 if __name__ == "__main__":

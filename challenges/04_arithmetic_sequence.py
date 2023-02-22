@@ -1,6 +1,6 @@
 from input import get_int
 
-NUMBERS = 3
+NUMBERS = 4
 
 
 def is_arithmetic(sequence: list) -> bool:
@@ -13,14 +13,14 @@ def is_arithmetic(sequence: list) -> bool:
 
 def main():
     numbers = []
-    for i in range(NUMBERS + 1):
+    for i in range(NUMBERS):
         number = get_int(f"input number #{i + 1}: ")
         numbers.append(number)
 
     if is_arithmetic(numbers):
-        print("that is an arithmetic sequence")
+        print(f"{numbers} is an arithmetic sequence")
     else:
-        print("that is not an arithmetic sequence")
+        print(f"{numbers} is not an arithmetic sequence")
 
 
 if __name__ == "__main__":

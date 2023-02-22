@@ -1,7 +1,5 @@
 def main():
-    total = 0
-    for i in range(10, 21):
-        total += i
+    total = sum(range(10, 21))
     print(total)
 
 

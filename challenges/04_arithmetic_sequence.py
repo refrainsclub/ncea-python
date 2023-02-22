@@ -1,5 +1,7 @@
 from input import get_int
 
+NUMBERS = 3
+
 
 def is_arithmetic(sequence: list) -> bool:
     delta = sequence[1] - sequence[0]  # difference between the first and second element
@@ -11,7 +13,7 @@ def is_arithmetic(sequence: list) -> bool:
 
 def main():
     numbers = []
-    for i in range(4):
+    for i in range(NUMBERS + 1):
         number = get_int(f"input number #{i + 1}: ")
         numbers.append(number)
 

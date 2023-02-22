@@ -1,6 +1,6 @@
 def main():
     total = sum(range(101))
-    print(total)
+    print(f"{total:,}")
 
 
 if __name__ == "__main__":

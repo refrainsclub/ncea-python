@@ -1,16 +1,17 @@
 from input import get_ranged_int
 
+YEARS = 10
 GRADUATE_AGE = 18
 
 
 def main():
     age = get_ranged_int("enter an age: ", 0, 9999)
 
-    age_in_ten_years = age + 10
+    future_age = age + YEARS
 
-    print(f"\nin 10 years, you will be {age_in_ten_years:,}")
+    print(f"\nin {YEARS:,} years, you will be {future_age:,}")
 
-    if age_in_ten_years <= GRADUATE_AGE:
+    if future_age <= GRADUATE_AGE:
         print("and you will be at school")
 
 

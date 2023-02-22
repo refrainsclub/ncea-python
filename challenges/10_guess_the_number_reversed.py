@@ -13,14 +13,14 @@ def main():
     maximum = INITIAL_MAX
     guesses = 0
 
-    print(f"Think of a number between {INITIAL_MIN} to {INITIAL_MAX}")
+    print(f"Think of a number between {INITIAL_MIN:,} to {INITIAL_MAX:,}")
     print(f"valid choices: {VALID_CHOICES}\n")
 
     while answer != "correct":
         try:
             guess = randint(minimum, maximum)
             guesses += 1
-            answer = get_string(f"my guess is {guess}. ", VALID_CHOICES)
+            answer = get_string(f"my guess is {guess:,}. ", VALID_CHOICES)
 
             if answer == "lower":
                 maximum = guess - 1
@@ -30,7 +30,7 @@ def main():
             print("im out of choices")
             break
     else:
-        print(f"it took me {guesses} guess(es).")
+        print(f"it took me {guesses:,} guess(es).")
 
 
 if __name__ == "__main__":

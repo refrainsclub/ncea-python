@@ -16,7 +16,7 @@ def main():
 
     print(f"{fahrenheit_temp:,}°F is equal to {celsius_temp_rounded:,}°C")
 
-    output = f"{celsius_temp_rounded} is "
+    output = f"{celsius_temp_rounded:,} is "
 
     if celsius_temp < WARM_TEMP:
         output += "cold"

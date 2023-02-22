@@ -9,7 +9,7 @@ def is_even(number: int) -> bool:
 
 
 def main():
-    number = get_ranged_int(f"enter a number between {LOWEST_NUMBER} and {HIGHEST_NUMBER}: ",
+    number = get_ranged_int(f"enter a number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ",
                             LOWEST_NUMBER,
                             HIGHEST_NUMBER)
 

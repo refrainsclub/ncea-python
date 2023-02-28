@@ -5,10 +5,9 @@ import input
 def main():
     questions = input.get_int("how many questions would you like to answer? ")
     time_tables = list(range(1, input.get_int("how many times tables do you want? ") + 1))
-    answered = 0
     print("")
 
-    while answered < questions:
+    for _ in range(questions):
         first_number = random.choice(time_tables)
         second_number = random.choice(time_tables)
 
@@ -24,8 +23,6 @@ def main():
             else:
                 print("correct! ✓\n")
                 break
-
-        answered += 1
 
     print("you are done!")
 

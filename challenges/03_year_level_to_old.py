@@ -1,4 +1,4 @@
-from input import get_ranged_int
+import input
 
 equivalents = {
     1: "J1",
@@ -18,7 +18,7 @@ equivalents = {
 
 
 def main():
-    year_level = get_ranged_int("enter a year level (between 1 and 13): ", 1, 13)
+    year_level = input.get_ranged_int("enter a year level (between 1 and 13): ", 1, 13)
     print(f"{year_level} is equivalent to {equivalents.get(year_level)}")
 
 

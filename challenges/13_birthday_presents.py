@@ -1,11 +1,11 @@
-from input import get_ranged_int
+import input
 
 AGE_MIN = 1
 AGE_MAX = 18
 
 
 def main():
-    age = get_ranged_int("enter an age (between 1 and 18): ", AGE_MIN, AGE_MAX)
+    age = input.get_ranged_int("enter an age (between 1 and 18): ", AGE_MIN, AGE_MAX)
 
     presents = 0
     for i in range(1, age + 1):

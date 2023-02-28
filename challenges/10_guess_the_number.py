@@ -1,6 +1,5 @@
 import random
-
-from input import get_int
+import input
 
 LOWEST_NUMBER = 1
 HIGHEST_NUMBER = 50
@@ -11,7 +10,7 @@ def main():
     guess = None
 
     while guess != number:
-        guess = get_int(f"guess a random number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ")
+        guess = input.get_int(f"guess a random number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ")
 
         if guess < number:
             print("your guess is too low!\n")

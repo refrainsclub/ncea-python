@@ -1,11 +1,11 @@
-from input import get_ranged_int
+import input
 
 YEARS = 10
 GRADUATE_AGE = 18
 
 
 def main():
-    age = get_ranged_int("enter an age: ", 0, 9999)
+    age = input.get_ranged_int("enter an age: ", 0, 9999)
 
     future_age = age + YEARS
 

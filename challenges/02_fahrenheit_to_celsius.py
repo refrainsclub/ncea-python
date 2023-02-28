@@ -1,4 +1,4 @@
-from input import get_int
+import input
 
 WARM_TEMP = 16
 HOT_TEMP = 24
@@ -9,7 +9,7 @@ def convert_to_celsius(fahrenheit: float) -> float:
 
 
 def main():
-    fahrenheit_temp = get_int("enter a temperature in fahrenheit: ")
+    fahrenheit_temp = input.get_int("enter a temperature in fahrenheit: ")
 
     celsius_temp = convert_to_celsius(fahrenheit_temp)
     celsius_temp_rounded = round(celsius_temp, 2)

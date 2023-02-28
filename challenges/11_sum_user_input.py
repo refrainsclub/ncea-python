@@ -1,10 +1,10 @@
-from input import get_int
+import input
 
 
 def main():
-    start = get_int("enter the start: ")
-    end = get_int("enter the end: ")
-    step = get_int("enter the steps: ")
+    start = input.get_int("enter the start: ")
+    end = input.get_int("enter the end: ")
+    step = input.get_int("enter the steps: ")
     total = sum(range(start, end + 1, step))
     print(f"the sum of all numbers in the range {start:,}, {end:,}, {step:,} is {total:,}")
 

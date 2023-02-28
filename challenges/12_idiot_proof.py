@@ -1,4 +1,4 @@
-from input import get_ranged_int
+import input
 
 LOWEST_NUMBER = 1
 HIGHEST_NUMBER = 100
@@ -9,7 +9,7 @@ def is_even(number: int) -> bool:
 
 
 def main():
-    number = get_ranged_int(f"enter a number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ",
+    number = input.get_ranged_int(f"enter a number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ",
                             LOWEST_NUMBER,
                             HIGHEST_NUMBER)
 

@@ -1,4 +1,4 @@
-from input import get_int
+import input
 
 NUMBERS = 4
 
@@ -14,7 +14,7 @@ def is_arithmetic(sequence: list) -> bool:
 def main():
     numbers = []
     for i in range(NUMBERS):
-        number = get_int(f"input number #{i + 1}: ")
+        number = input.get_int(f"input number #{i + 1}: ")
         numbers.append(number)
 
     if is_arithmetic(numbers):

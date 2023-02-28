@@ -1,5 +1,5 @@
-from random import randint
-from turtle import exitonclick, colormode, speed, color, circle, right
+import random
+import turtle
 
 SPEED = 0              # the speed
 ANGLE = 10             # the angle per step
@@ -13,14 +13,16 @@ FULL_ANGLE = 360
 
 
 def main():
-    speed(SPEED)
-    colormode(RGB_RANGE)  # allow rgb colours from 0 to 255
+    turtle.speed(SPEED)
+    turtle.colormode(RGB_RANGE)  # allow rgb colours from 0 to 255
     for _ in range(FULL_ANGLE // ANGLE):
-        color(randint(RGB_MIN, RGB_MAX), randint(RGB_MIN, RGB_MAX), randint(RGB_MIN, RGB_MAX))
-        circle(INNER_RADIUS)
-        circle(OUTER_RADIUS)
-        right(ANGLE)
-    exitonclick()
+        turtle.color(random.randint(RGB_MIN, RGB_MAX),
+                     random.randint(RGB_MIN, RGB_MAX),
+                     random.randint(RGB_MIN, RGB_MAX))
+        turtle.circle(INNER_RADIUS)
+        turtle.circle(OUTER_RADIUS)
+        turtle.right(ANGLE)
+    turtle.exitonclick()
 
 
 if __name__ == "__main__":

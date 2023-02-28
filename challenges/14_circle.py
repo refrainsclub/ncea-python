@@ -1,11 +1,11 @@
-from turtle import circle, exitonclick
+import turtle
 
 RADIUS = 100
 
 
 def main():
-    circle(RADIUS)
-    exitonclick()
+    turtle.circle(RADIUS)
+    turtle.exitonclick()
 
 
 if __name__ == "__main__":

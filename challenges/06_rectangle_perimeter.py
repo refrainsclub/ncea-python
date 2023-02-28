@@ -1,9 +1,9 @@
-from input import get_float
+import input
 
 
 def main():
-    base = get_float("enter the base: ")
-    height = get_float("enter the height: ")
+    base = input.get_float("enter the base: ")
+    height = input.get_float("enter the height: ")
     perimeter = base * 2 + height * 2
     print(f"the perimeter is {perimeter:,}")
 

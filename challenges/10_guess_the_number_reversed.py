@@ -1,6 +1,5 @@
-from random import randint
-
-from input import get_string
+import random
+import input
 
 INITIAL_MIN = 1
 INITIAL_MAX = 100
@@ -18,9 +17,9 @@ def main():
 
     while answer != "correct":
         try:
-            guess = randint(minimum, maximum)
+            guess = random.randint(minimum, maximum)
             guesses += 1
-            answer = get_string(f"my guess is {guess:,}. ", VALID_CHOICES)
+            answer = input.get_string(f"my guess is {guess:,}. ", VALID_CHOICES)
 
             if answer == "lower":
                 maximum = guess - 1

@@ -1,16 +1,16 @@
 import random
 import input
 
-TIMES_TABLES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-QUESTIONS = 5
-
 
 def main():
+    questions = input.get_int("how many questions would you like to answer? ")
+    time_tables = list(range(1, input.get_int("how many times tables do you want? ") + 1))
     answered = 0
+    print("")
 
-    while answered < QUESTIONS:
-        first_number = random.choice(TIMES_TABLES)
-        second_number = random.choice(TIMES_TABLES)
+    while answered < questions:
+        first_number = random.choice(time_tables)
+        second_number = random.choice(time_tables)
 
         equation = f"{first_number} × {second_number}"
         answer = first_number * second_number
@@ -20,9 +20,9 @@ def main():
             user_answer = input.get_int(f"what does {equation} equal? ")
 
             if user_answer != answer:
-                print(f"incorrect! try again\n")
+                print(f"incorrect! ✕\n")
             else:
-                print("correct!\n")
+                print("correct! ✓\n")
                 break
 
         answered += 1

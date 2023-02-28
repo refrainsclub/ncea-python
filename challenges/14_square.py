@@ -1,12 +1,14 @@
 from turtle import forward, right, exitonclick
 
-SIZE = 50
+SIDES = 4
+SIDE_LENGTH = 50
+ANGLE = 90
 
 
 def main():
-    for _ in range(4):
-        forward(SIZE)
-        right(90)
+    for _ in range(SIDES):
+        forward(SIDE_LENGTH)
+        right(ANGLE)
     exitonclick()
 
 

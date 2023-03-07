@@ -10,8 +10,8 @@ def is_even(number: int) -> bool:
 
 def main():
     number = input.get_ranged_int(f"enter a number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ",
-                            LOWEST_NUMBER,
-                            HIGHEST_NUMBER)
+                                  LOWEST_NUMBER,
+                                  HIGHEST_NUMBER)
 
     if is_even(number):
         print(f"{number:,} is even")

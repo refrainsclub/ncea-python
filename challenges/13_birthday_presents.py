@@ -11,6 +11,7 @@ def main():
     for i in range(1, age + 1):
         presents += 20 - i
 
+    print(f"you should have received {20 - age} presents this year")
     print(f"at {age} year(s) old, you should have {presents} presents")
 
 

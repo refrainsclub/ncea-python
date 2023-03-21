@@ -1,15 +1,17 @@
 import turtle
 
+SPEED = 0
 
-def draw_eye(x: float, y: float, color):
+
+def draw_eye(x: float, y: float, size: float, color):
     setup(x, y, color)
-    turtle.circle(12)
+    turtle.circle(size)
     turtle.penup()
 
 
-def draw_outline(x: float, y: float, color):
+def draw_outline(x: float, y: float, size: float, color):
     setup(x, y, color)
-    turtle.circle(150)
+    turtle.circle(size)
     turtle.penup()
 
 
@@ -20,11 +22,11 @@ def setup(x: float, y: float, color):
 
 
 def main():
-    turtle.speed(0)
+    turtle.speed(SPEED)
     turtle.penup()
-    draw_outline(-50, -150, "red")  # outline
-    draw_eye(-150, 50, "blue")  # first eye
-    draw_eye(50, 50, "purple")  # second eye
+    draw_outline(-50, -150, 150, "red")  # outline
+    draw_eye(-150, 50, 12, "blue")  # first eye
+    draw_eye(50, 50, 12, "purple")  # second eye
     turtle.exitonclick()
 
 

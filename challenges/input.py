@@ -39,3 +39,14 @@ def get_string(prompt: str, valid_choices: list) -> str:
             return answer
         print(f"Please enter a valid choice!\nValid choices: {valid_choices}\n")
         continue
+
+
+def get_bool(prompt: str) -> bool:
+    while 1:
+        answer = input(prompt)
+        if answer == "y":
+            return True
+        elif answer == "n":
+            return False
+        print("Please enter a valid choice!\nValid choices: y/n\n")
+        continue

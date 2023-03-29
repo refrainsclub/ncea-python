@@ -20,9 +20,8 @@ def main():
 
             if user_answer != answer:
                 print(f"incorrect! ✕\n")
-            else:
-                print("correct! ✓\n")
-                break
+        else:
+            print("correct! ✓\n")
 
     print("you are done!")
 

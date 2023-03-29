@@ -4,10 +4,6 @@ WARM_TEMP = 16
 HOT_TEMP = 24
 
 
-def convert_to_celsius(fahrenheit: float) -> float:
-    return (fahrenheit - 32) * 5 / 9
-
-
 def main():
     fahrenheit_temp = input.get_int("enter a temperature in fahrenheit: ")
 
@@ -26,6 +22,10 @@ def main():
         output += "hot"
 
     print(output)
+
+
+def convert_to_celsius(fahrenheit: float) -> float:
+    return (fahrenheit - 32) * 5 / 9
 
 
 if __name__ == "__main__":

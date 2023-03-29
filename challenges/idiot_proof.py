@@ -4,10 +4,6 @@ LOWEST_NUMBER = 1
 HIGHEST_NUMBER = 100
 
 
-def is_even(number: int) -> bool:
-    return number % 2 == 0
-
-
 def main():
     number = input.get_ranged_int(f"enter a number between {LOWEST_NUMBER:,} and {HIGHEST_NUMBER:,}: ",
                                   LOWEST_NUMBER,
@@ -17,6 +13,10 @@ def main():
         print(f"{number:,} is even")
     else:
         print(f"{number:,} is odd")
+
+
+def is_even(number: int) -> bool:
+    return number % 2 == 0
 
 
 if __name__ == "__main__":

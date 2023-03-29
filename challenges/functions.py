@@ -37,6 +37,27 @@ RIGHT_EYE_SIZE = 12
 SUNGLASSES_LOCATION = (-50, 50)
 
 
+def main():
+    # set up the turtle
+    turtle.speed(SPEED)
+    turtle.pensize(PEN_SIZE)
+
+    # draw the base
+    draw_circle(OUTLINE_LOCATION[0], OUTLINE_LOCATION[1], OUTLINE_SIZE, get_color())  # outline
+    draw_circle(LEFT_EYE_LOCATION[0], LEFT_EYE_LOCATION[1], LEFT_EYE_SIZE, get_color())  # first eye
+    draw_circle(RIGHT_EYE_LOCATION[0], RIGHT_EYE_LOCATION[1], RIGHT_EYE_SIZE, get_color())  # second eye
+
+    # ask the user if it is cool
+    cool = input.get_string(PROMPT, VALID_CHOICES)
+    if cool in YES:
+        draw_sunglasses(SUNGLASSES_LOCATION[0], SUNGLASSES_LOCATION[1])
+        print(YES_OUTPUT)
+    elif cool in NO:
+        print(NO_OUTPUT)
+
+    turtle.exitonclick()
+
+
 def draw_circle(x: float, y: float, size: float, color):
     setup(x, y, color)
     turtle.circle(size)
@@ -64,27 +85,6 @@ def draw_gif(gif: str):
 
 def get_color() -> str:
     return "#" + "".join(random.choices(COLORS, k=6))
-
-
-def main():
-    # set up the turtle
-    turtle.speed(SPEED)
-    turtle.pensize(PEN_SIZE)
-
-    # draw the base
-    draw_circle(OUTLINE_LOCATION[0], OUTLINE_LOCATION[1], OUTLINE_SIZE, get_color())  # outline
-    draw_circle(LEFT_EYE_LOCATION[0], LEFT_EYE_LOCATION[1], LEFT_EYE_SIZE, get_color())  # first eye
-    draw_circle(RIGHT_EYE_LOCATION[0], RIGHT_EYE_LOCATION[1], RIGHT_EYE_SIZE, get_color())  # second eye
-
-    # ask the user if it is cool
-    cool = input.get_string(PROMPT, VALID_CHOICES)
-    if cool in YES:
-        draw_sunglasses(SUNGLASSES_LOCATION[0], SUNGLASSES_LOCATION[1])
-        print(YES_OUTPUT)
-    elif cool in NO:
-        print(NO_OUTPUT)
-
-    turtle.exitonclick()
 
 
 if __name__ == "__main__":

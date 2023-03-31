@@ -3,7 +3,8 @@ MAX = 20
 
 
 def main():
-    print(f"The captain is {get_captain()}")
+    captain = get_captain()
+    print(f"The captain is {captain}")
 
 
 def get_captain():
@@ -21,5 +22,5 @@ def get_captain():
     return names[2]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

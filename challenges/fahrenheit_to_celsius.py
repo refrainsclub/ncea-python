@@ -12,16 +12,12 @@ def main():
 
     print(f"{fahrenheit_temp:,}°F is equal to {celsius_temp_rounded:,}°C")
 
-    output = f"{celsius_temp_rounded:,} is "
-
     if celsius_temp < WARM_TEMP:
-        output += "cold"
+        print(f"{celsius_temp_rounded:,} is cold")
     elif celsius_temp < HOT_TEMP:
-        output += "warm"
+        print(f"{celsius_temp_rounded:,} is warm")
     else:
-        output += "hot"
-
-    print(output)
+        print(f"{celsius_temp_rounded:,} is hot")
 
 
 def convert_to_celsius(fahrenheit: float) -> float:
